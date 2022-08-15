@@ -4,9 +4,9 @@ def rename():
     i = 0
     for adress, dirs, files in os.walk(path):
         for file in files:
-            if '_conver' in file:
+            if '_compressed' in file:
                 full = os.path.join(adress, file)
-                new_file = file.replace('_conver', '')
+                new_file = file.replace('_compressed', '')
                 new_full = os.path.join(adress, new_file)
                 os.rename(full, new_full)
                 i += 1
